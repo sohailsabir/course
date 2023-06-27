@@ -1,0 +1,14 @@
+{% extends "outline/layout.html" %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+        {{ content | safe }}
+    </div>
+
+    <a href="{% url 'outline:edit' title %}">EDIT</a>
+{% endblock %}

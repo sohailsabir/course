@@ -1,0 +1,17 @@
+{% extends "outline/layout.html" %}
+
+{% block title %}
+    Search
+{% endblock %}
+
+{% block body %}
+
+    <div>
+        <form action="{% url 'outline:create' %}" method="POST">
+            {% csrf_token %}
+            {{createform.as_p}}
+            <input type="Submit" name="submit" value="Submit"/>
+        </form>
+    </div>
+
+{% endblock %}

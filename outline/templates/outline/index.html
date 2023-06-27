@@ -1,0 +1,16 @@
+{% extends "outline/layout.html" %}
+
+{% block title %}
+    Outline
+{% endblock %}
+
+{% block body %}
+    <h1>All Courses</h1>
+
+    <ul>
+        {% for topic in topics %}
+        <a href="/{{topic}}"><li>{{ topic }}</li></a>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
